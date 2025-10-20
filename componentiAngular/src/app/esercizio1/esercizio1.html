@@ -1,0 +1,19 @@
+<h2>Esercizio 1: *ngIf</h2>
+
+<button (click)="toggle()">
+  Mostra / Nascondi
+</button>
+
+<hr>
+
+<div *ngIf="isVisibile; else bloccoAlternativo" class="box-visibile">
+  <h3>SONO VISIBILE!</h3>
+  <p>Questo blocco appare perché 'isVisibile' è <strong>true</strong>.</p>
+</div>
+
+<ng-template #bloccoAlternativo>
+  <div class="box-nascosto">
+    <h3>SONO NASCOSTO!</h3>
+    <p>Questo blocco appare perché 'isVisibile' è <strong>false</strong>.</p>
+  </div>
+</ng-template>
