@@ -1,11 +1,13 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-componente1',
-  imports: [],
-  templateUrl: './componente1.html',
-  styleUrl: './componente1.css'
+  standalone: true, // ✅ deve esserci qui
+  imports: [CommonModule],
+  templateUrl: './componente1.html', // ✅ nome corretto del file
+  styleUrls: ['./componente1.css']   // ✅ proprietà al plurale
 })
-export class Componente1 {
-  
-}
+export class Componente1Component {
+
+  }
